@@ -1,0 +1,109 @@
+.site-search {
+    &-inner-panel {
+        display: flex;
+        right: fluid-margin();
+        left: fluid-margin();
+        flex-direction: column;
+    }
+
+    &-title {
+        lost-column: 16/16;
+        lost-offset: 0/16;
+        margin-bottom: px-to-em(48);
+    }
+
+    &-input {
+        lost-column: 16/16;
+        lost-offset: 0/16;
+        flex: 0 0 auto;
+    }
+
+    &-results {
+        @include underline-only-on-hover;
+
+        lost-column: 15/16;
+        lost-offset: 0/16;
+        display: none;
+        margin-top: 65px;
+        font-family: $header-font;
+
+        h5 {
+            margin-bottom: px-to-em(30, 24);
+        }
+
+        ul,
+        li {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        li {
+            padding: 0;
+        }
+
+        a {
+            @include link-colour($white);
+            
+            display: block;
+            border-bottom: 1px dashed $dark-grey;
+            padding-right: 1em;
+            padding-bottom: px-to-em(15);
+            line-height: 22 / 20 + 0;
+            font-size: px-to-em(20);
+            font-weight: bold;
+        }
+
+        @include for-tablet-portrait-up {
+            display: initial;
+        }
+    }
+
+    @include for-largerthan-ipad-portrait {
+        &-title {
+            lost-column: 14/16;
+            lost-offset: 1/16;
+        }
+    
+        &-input {
+            lost-column: 14/16;
+            lost-offset: 1/16;
+            flex: 0 0 auto;
+        }
+    
+        &-results {
+            lost-column: 13/16;
+            lost-offset: 1/16;
+        }
+    }
+    
+    @include for-tablet-landscape-up {
+
+        &-inner-panel {
+            flex-direction: row;
+        }
+
+        &-title {
+            lost-column: 12/13;
+            lost-offset: 1/13;
+        }
+
+        &-input {
+            lost-column: 8/13;
+            lost-offset: 1/13;
+            margin-top: px-to-em(16);
+            padding-right: 40px;
+            flex: 0 0 auto;
+        }
+
+        &-results {
+            lost-offset: 0/13;
+            lost-column: 4/13;
+            padding-right: 50px;
+            margin-top: 0;
+
+            @include for-desktop-up {
+                padding-right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.text-block {
+    // mixin that sets a consistent columns width
+    @include uod-text-column;
+    
+    // start: set default intra-component spacing (units are responsive and based on em values)
+    @include margin-medium;
+    
+    @include for-tablet-portrait-up {
+        @include margin-large;
+    }
+    // end: set default intra-component spacing (units are responsive and based on em values)
+
+    @include for-desktop-up {
+        table {
+            lost-offset: -2/16;
+            lost-column: 20/16;
+        }
+    }
+
+    &-published-date {
+        margin-bottom: 0;
+    }
+}

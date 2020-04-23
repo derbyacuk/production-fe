@@ -1,0 +1,20 @@
+.pattern-hero-search {
+    @include full-bleed-inset;
+
+    padding-top: $margin-small;
+    padding-bottom: $margin-small;
+
+    &-container {
+        lost-column: 8/8;
+
+        @include for-tablet-portrait-up {
+            lost-offset: 1/16;
+            lost-column: 14/16;
+        }
+
+        @include for-desktop-up {
+            lost-offset: 3/16;
+            lost-column: 10/16;
+        }
+    }
+}

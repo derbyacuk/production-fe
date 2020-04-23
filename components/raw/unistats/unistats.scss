@@ -1,0 +1,33 @@
+.unistats-widget {
+    overflow: hidden;
+    border: 0px none transparent;
+    background: $mid-grey;
+
+    &-vertical {
+        width: 190px;
+        height: 500px;
+        display: block;
+
+        @include for-largerthan-ipad-portrait {
+            display: none;
+        }
+    }
+    
+    &-horizontal {
+        width: 615px;
+        height: 150px;
+        display: none;
+
+        @include for-largerthan-ipad-portrait {
+            display: block;
+        }
+    }
+}
+
+.unistats {
+    .accordion-tab-content-inner {
+        display: flex;
+        justify-content: center
+    }
+}
+    

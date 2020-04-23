@@ -1,0 +1,62 @@
+
+/* wufoo specific styles */
+
+form.wufoo {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h1#logo {
+    display: none;
+}
+
+#container {
+    background: $white;
+    border: none;
+    box-shadow: none;
+    @extend .center-align;  
+    width: auto;
+
+    @include for-largerthan-ipad-portrait {
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+/* hide quantity on radio fields with limits */
+form.wufoo input+label.choice .choice__qty,
+#public input[disabled] + label.choice .choice__qty,
+form.wufoo input+label.choice .choice__qty span,
+#public input[disabled] + label.choice .choice__qty span {
+    color: transparent;
+}
+
+/* 
+    When you create a default theme in Wufoo as well as your own style sheet before if it adds another comprimising of styles that can be configured in the interface.
+    Helpfully there is no way to exclude this... here we overwrite all that drose... 
+*/
+form li.complex div span.left, form li.complex div span.right {
+    width: 100%;
+}
+.wufoo .info h2 {
+    @include header;
+    color: $primary-blue;
+}
+.wufoo .section h3 {
+    @include header;
+    color: $primary-blue;
+}
+.wufoo label.desc, .wufoo legend.desc {
+    @extend label.desc;
+}
+.wufoo .section div,
+.wufoo label.choice,
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file,
+.wufoo li div, .wufoo li span, .wufoo li div label, .wufoo li span label,
+.wufoo .instruct small{
+    font-family: $body-font;
+}
+
+                       

@@ -1,0 +1,27 @@
+.feature-block {
+    @include large-body-font;
+    
+    background: $primary-blue;
+    padding: fluid-margin();
+    color: $white;
+
+    @include for-largerthan-ipad-portrait {
+        padding: $max-size;
+    }
+
+    &-white {
+        @extend .feature-block;
+        background: $white;
+        color: $text-black;
+    }
+
+    &-blue {
+        @extend .feature-block;
+        background: $primary-blue;
+    }
+
+    &-black {
+        @extend .feature-block;
+        background: $black;
+    }
+}

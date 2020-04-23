@@ -1,0 +1,13 @@
+.pagination-controls {
+    @include margin-large;
+    
+    text-align: right;
+
+    a {
+        @extend %button;
+    }
+
+    span {
+        @extend .button-blue;
+    }
+}
